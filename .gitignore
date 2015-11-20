@@ -5,7 +5,7 @@
 ._*
 
 ## Directory-based project format:
-.idea/
+/.idea/
 
 # ctags files
 /.tags
@@ -23,3 +23,5 @@
 
 # ignore test
 /_test/
+
+/cache/
