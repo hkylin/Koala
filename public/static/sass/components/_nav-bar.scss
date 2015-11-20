@@ -1,0 +1,74 @@
+/* 导航栏 */
+.ST-nav {
+    padding: 10px 0;
+    margin-bottom: 1em;
+}
+
+.ST-logo,
+.gb-search {
+    float: left;
+}
+
+.ST-navbar:after {
+    display: table;
+    clear: both;
+
+    content: '';
+}
+
+.ST-logo {
+    width: 50px;
+}
+.ST-logo img {
+    display: block;
+
+    width: 100%;
+}
+
+.gb-search {
+    margin-left: 4em;
+    margin-top: 0.35em;
+}
+
+.button-wrap {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+    color: #55595c;
+    text-align: center;
+    background-color: #eceeef;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.search-btn {
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+.search-btn:hover {
+    color: $st-accent-color;
+}
+
+.input-group-addon button {
+    border: 0;
+    background: none;
+}
+
+.gb-profile {
+    float: right;
+
+    margin: 11px 0;
+}
+.gb-profile a {
+    margin-right: 10px;
+
+    color: $st-primary-text;
+}
+.gb-profile a:hover {
+    color: $st-accent-color;
+}
+.gb-profile a span {
+    margin-left: 5px;
+}

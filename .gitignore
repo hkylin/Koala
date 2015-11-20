@@ -6,3 +6,20 @@
 
 ## Directory-based project format:
 .idea/
+
+# ctags files
+/.tags
+/.gemtags
+/.tags_sorted_by_file
+
+# ignore uploaded images
+/public/upload/
+
+# ignore smarty cache
+/public/tpl_c/
+
+# ignore sass cache
+/public/static/.sass-cache/
+
+# ignore test
+/_test/

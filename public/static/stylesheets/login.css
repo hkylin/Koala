@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* web main color style */
+/* tip */
+/* line 6, ../sass/login.scss */
+.login-area {
+  max-width: 400px;
+  margin: 50px auto 0 auto;
+}
+
+/* line 11, ../sass/login.scss */
+.login-card {
+  background: url(http://localhost:8888/public/static/images/logo.jpg) no-repeat 345px 13px #fff;
+  background-size: 45px;
+}
+
+/* line 16, ../sass/login.scss */
+.login-legend {
+  font-size: 24px;
+  margin-bottom: 16.66667px;
+  color: #009688;
+}
+
+/* line 24, ../sass/login.scss */
+.card-bottom {
+  width: 95%;
+  margin: -1em auto 0 auto;
+  padding: 1em;
+  box-shadow: 0 0 15px 0 rgba(163, 180, 188, 0.3);
+}
+
+/* 个人资料 profile */
+/* line 33, ../sass/login.scss */
+.profile-area {
+  max-width: 600px;
+  margin: 50px auto 0 auto;
+}
+
+/* line 38, ../sass/login.scss */
+.profile-area .login-card {
+  background-position: 98% 13px;
+}
+
+/* line 42, ../sass/login.scss */
+.avatar-hodler {
+  width: 100px;
+  height: 100px;
+  margin: 0 .75em .75em .75em;
+}
+
+/* line 48, ../sass/login.scss */
+.avatar-hodler img {
+  width: 100%;
+}
+
+/* line 52, ../sass/login.scss */
+.avatar-upload-field {
+  top: 4em;
+  padding: 0 .75rem;
+}

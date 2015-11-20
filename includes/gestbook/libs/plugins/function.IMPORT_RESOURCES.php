@@ -2,8 +2,8 @@
 /**
  * 加载网站静态文件
  * @param $params
- *  ['resources_dir'] 静态文件的主路径，默认为 RES_DIR = '/public/static'
- *  ['imgServer'] 静态文件路径，在 resources_dir 下，默认为 /public/static 下的静态文件
+ *  ['resources_dir'] [静态文件的主路径，默认为 RES_DIR = '/public/static']
+ *  ['imgServer'] [静态文件路径，在 resources_dir 下，默认为 /public/static 下的静态文件]
  *
  * @param Smarty_Internal_Template $template
  * @return string

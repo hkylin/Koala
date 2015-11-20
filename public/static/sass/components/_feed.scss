@@ -1,0 +1,204 @@
+.ST-info {
+    margin: 0 0 3px 0;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.avatar img {
+    width: 100%;
+
+    border-radius: 100%;
+}
+
+.ST-detail {
+    margin-left: 70px;
+}
+
+.ST-media-box:after {
+    display: table;
+    clear: both;
+
+    content: '';
+}
+
+.ST-media {
+    float: left;
+
+    width: 271px;
+    margin: 0;
+    margin-left: -5px;
+    padding: 0;
+}
+
+.ST-media:after {
+    display: table;
+    clear: both;
+
+    content: '';
+}
+
+.ST-media li {
+    float: left;
+
+    margin: 5px 0 0 5px;
+}
+
+.s-img {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 80px;
+    height: 80px;
+}
+
+.s-img img {
+    width: 100%;
+}
+
+
+// 鼠标
+.bg-cursor {
+    cursor: -webkit-zoom-in !important;
+}
+
+.sm-cursor {
+    cursor: -webkit-zoom-out !important;
+}
+
+.next-cursor {
+    cursor: e-resize;
+}
+
+.prev-cursor {
+    cursor: w-resize;
+}
+
+
+// 媒体框展开
+.ST-expend-media-box {
+    background: $st-lighter-primary-color;
+}
+
+.ST-expend-media {
+    margin: 2px 0 8px;
+    padding: 12px 16px 16px;
+}
+
+.tab ul {
+    margin: 0;
+    padding: 0 15px;
+    list-style: none;
+}
+
+.tab ul li {
+    float: left;
+
+    margin-right: 30px;
+}
+
+.tab ul li a {
+    color: $st-secondary-text;
+}
+.tab ul li a:hover {
+    color: $st-accent-color;
+}
+
+.tab ul li a i {
+    margin-right: 5px;
+}
+
+.tab ul li .material-icons {
+    font-size: 14px;
+
+    margin-right: 3px;
+
+    vertical-align: middle;
+}
+
+.ST-media-view {
+    margin: 10px 15px;
+}
+
+.media-show-box {
+    overflow: hidden;
+}
+
+.artwork-box img {
+    width: 100%;
+}
+
+.post-datetime {
+    font-size: 12px;
+
+    margin-top: 10px;
+    margin-left: 70px;
+
+    color: #9f9f9f;
+}
+
+// choose box
+.pic-select-box {
+    margin-top: 5px;
+}
+
+.stage-box {
+    overflow: hidden;
+}
+
+.stage-box .choose-box {
+    margin: 0 0 0 -10px;
+}
+
+.stage-box .choose-box:after {
+    display: table;
+    clear: both;
+
+    content: '';
+}
+
+.stage-box .choose-box li {
+    float: left;
+    overflow: hidden;
+
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+}
+
+.stage-box .choose-box li img {
+    width: 100%;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,.75);
+}
+
+.post-opration {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.dropdown .dropdown-btn {
+    color: #e5e5e5;
+}
+.dropdown .dropdown-btn:hover {
+    color: #818a91;
+}
+
+.dropdown-open {
+    display: block;
+    right: 0;
+    left: auto;
+}

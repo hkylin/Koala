@@ -1,9 +1,9 @@
 <?php
+require('app.php');
 
-require './includes/gestbook/setup.php';
+// 得到主页 post 数据
+$post = get_post();
 
-$smarty = new Smarty_Setup();
-
-$smarty->assign('name','Ned');
-
+//$smarty->assign('isMe', false);
+$smarty->assign('post', $post);
 $smarty->display('index.tpl');

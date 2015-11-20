@@ -4,11 +4,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/includes/gestbook/smarty_const.php');
 // load Smarty library
 require($_SERVER['DOCUMENT_ROOT'] . '/includes/gestbook/libs/Smarty.class.php');
 
-// The setup.php file is a good place to load
-// required application library files, and you
-// can do that right here. An example:
-// require('guestbook/guestbook.lib.php');
 
+/**
+ * Class Smarty_Setup
+ * 用来设置 Smarty 模板的
+ */
 class Smarty_Setup extends Smarty {
 
     function __construct(){

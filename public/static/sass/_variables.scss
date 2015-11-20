@@ -1,0 +1,37 @@
+// FontAwesome path
+@import 'fontAwesome/_variables';
+
+
+/* web main color style */
+$st-dark-primary-color: #455A64 !default;
+$st-primary-color: #607D8B !default;
+$st-lighter-primary-color: #CFD8DC !default;
+$st-text-color: #FFFFFF !default;
+$st-accent-color: #009688 !default;
+$st-primary-text: #212121 !default;
+$st-secondary-text: #727272 !default;
+$st-divider-color: #B6B6B6 !default;
+
+$max-width: 1200px !default;
+$padding: 50px !default;
+$pdg-1em: 1em !default;
+
+$box-shadow: 0 0 15px 0 rgba(darken($st-lighter-primary-color, 15%), 0.3);
+$box-shadow-inset: inset 0 0 15px 0 rgba(darken($st-lighter-primary-color, 15%), 0.3);
+
+/* tip */
+$success: #dff0d8;
+$success-txt: #3c763d;
+$success-border: #d6e9c6;
+
+$warning: #fcf8e3;
+$warning-txt: #8a6d3b;
+$warning-border: #faebcc;
+
+$attention: #d9edf7;
+$attention-txt: #31708f; 
+$attention-border: #bce8f1;
+
+$danger: #f2dede;
+$danger-txt: #a94442;
+$danger-border: #ebccd1;
