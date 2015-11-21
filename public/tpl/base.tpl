@@ -28,6 +28,9 @@
   {* 页脚 *}
   {include file="components/footer.tpl"}
 
+  {* modal *}
+  {include file="components/modal.tpl"}
+  
   {* 脚本 *}
   {block name="scripts"}{/block}
 </body>

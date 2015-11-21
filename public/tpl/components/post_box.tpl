@@ -13,7 +13,17 @@
       <p class="yo">不吐不快！赶紧把你压抑在心底的负能量大声喊出来吧！</p>
     </div>
     <div class="publish-textbox">
-      <textarea class="post-textbox" title="吐槽能量框"></textarea>
+      <div class="post-textbox-fake">
+        <div class="ps-box">
+          <div class="ps-inner">
+            <i class="fa fa-check-circle-o"></i>
+            <span>发布成功</span>
+          </div>
+        </div>
+      </div>
+      <div class="post-textbox-wrap">
+        <textarea class="post-textbox" title="吐槽能量框"></textarea>
+      </div>
     </div>
     <div class="media_box">
       <ul class="media_post_holder">

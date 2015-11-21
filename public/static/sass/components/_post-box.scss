@@ -6,11 +6,40 @@
     color: $st-accent-color;
 }
 
+.post-textbox-fake {
+    display: none;
+    .ps-box {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .ps-inner {
+            text-align: center;
+            margin-top: 1em;
+            font-size: 22px;
+
+            .fa {
+                color: #5cb85c;
+            }
+            span {
+                color: #373a3c;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
 .publish-textbox {
     margin-bottom: 1em;
 }
 
-.publish-textbox .post-textbox {
+.post-textbox-wrap {
+    line-height: 0;
+}
+
+.publish-textbox .post-textbox, .publish-textbox  .post-textbox-fake {
     width: 100%;
     height: 6.2em;
     padding: .5em;
@@ -20,6 +49,7 @@
     border: 1px solid $st-lighter-primary-color;
     outline: none;
     box-shadow: $box-shadow-inset;
+    line-height: 1.5;
 }
 
 .publish-textbox .post-textbox:focus {

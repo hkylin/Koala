@@ -23,7 +23,7 @@ if(!filled_out($_POST)) {
     exit;
 }
 
-if($password.length < 6 && $password.length > 16) {
+if(strlen($password) < 6 && strlen($password) > 16) {
     $json = array('data' => array(
         'msg' => '密码长度在 6~16 位之间',
         'code' => 0

@@ -34,3 +34,5 @@ requirejs.config({
   }
 
 });
+
+requirejs(['jquery', 'bootstrap', 'handles', 'gb_search', 'logout', 'serializeObject', 'feed']);

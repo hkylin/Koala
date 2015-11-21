@@ -36,14 +36,13 @@
               <small class="text-muted">我们不会将您的信息透露给任何人。</small>
             </fieldset>
             <fieldset class="form-group">
-              <label>性别</label>
+              <label class="pull-left">性别&nbsp;&nbsp;&nbsp;&nbsp;</label>
               <div class="radio">
                 <label>
                   <input name="gender" type="radio" value="male" id="male" {if $user_info['u_gender'] === 'male'}checked{/if} />
                   男
                 </label>
-              </div>
-              <div class="radio">
+                &nbsp;
                 <label>
                   <input name="gender" type="radio" value="female" id="female" class="with-gap" {if $user_info['u_gender'] === 'female'}checked{/if} />
                   女
@@ -53,6 +52,9 @@
             <fieldset class="form-group">
               <label for="mydesc">自我简介</label>
               <textarea id="mydesc" name="mydesc" class="form-control" rows="3" value="{$user_info['mydesc']}">{$user_info['u_mydesc']}</textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <a class="btn btn-danger" href="#changepsd" data-toggle="ST-modal" data-target="#popup" ST-type="changepsd">修改密码</a>
             </fieldset>
             <div class="txtalg-c">
               <button type="submit" class="btn btn-accent">保存</button>

@@ -1,5 +1,5 @@
 <?php
-/** 信息发布 **/
+/** 更新信息 **/
 
 // load php methods
 require('../app/methods.php');
@@ -10,6 +10,8 @@ $update_msg = $_POST['msg'];
 
 session_start();
 header("Content-Type: application/json; charset=UTF-8");
+
+check_auth_user();
 
 if(empty($post_id)) {
     $json = array('data' => array(

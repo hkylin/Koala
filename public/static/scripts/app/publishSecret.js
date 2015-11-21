@@ -4,6 +4,8 @@ define(['jquery'], function($) {
 $(function() {
   var $publishForm = $('#publish_form'),
       $postTextbox = $publishForm.find('.post-textbox'),
+      $fakePostTextbox = $publishForm.find('.post-textbox-fake'),
+      $psBox = $fakePostTextbox.find('.ps-box'),
       $sendBtn = $('#send_btn'),
       $mediaBtn = $('.media-btn'),
       $mediaUploadForm = $('#media_upload_form'),
@@ -78,9 +80,19 @@ $(function() {
           return false;
         }
 
-        $tip.html(msg).addClass('alert-success').slideDown(animateTime);
+        $postTextbox.hide();
+        $fakePostTextbox.show();
+        $psBox.fadeIn(animateTime, function() {
+          setTimeout(function() {
+            $psBox.fadeOut(animateTime, function() {
+              $fakePostTextbox.hide();
+              $postTextbox.show();
+            });
+          }, 500);
+        });
+
         // 将发布的数据加入页面中
-        $(post_content).prependTo($('.feed-wrap'));
+        $(post_content).prependTo($('.feed-wrap')).hide().slideDown(animateTime);
         $postTextbox.val('');
         $('.media_post_holder').html('');
         // 将发送按钮重新 disable

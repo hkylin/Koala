@@ -21,12 +21,12 @@ function get_user_id( $session_usr ) {
     }
 
     if(!$result->num_rows) {
-        $json = array('data' => array(
-            'msg' => '你没有注册',
-            'code' => 0
-        ));
-        echo json_encode($json);
-        exit;
+//        $json = array('data' => array(
+//            'msg' => '你没有注册',
+//            'code' => 0
+//        ));
+//        echo json_encode($json);
+        return false;
     }
 
     $r = $result->fetch_assoc();

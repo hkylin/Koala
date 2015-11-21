@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-19 09:26:59
+<?php /* Smarty version 3.1.27, created on 2015-11-20 06:35:29
          compiled from "/Applications/MAMP/htdocs/public/tpl/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1645250817564d87d3bd3fa5_86105668%%*/
+/*%%SmartyHeaderCode:1503581701564eb121837804_56970704%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -15,7 +15,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '010f63ceda076b7c35d9de11095db91e57c2edf9' => 
     array (
       0 => '/Applications/MAMP/htdocs/public/tpl/base.tpl',
-      1 => 1447914329,
+      1 => 1447986413,
       2 => 'file',
     ),
     '82bf44a0def66157f5ec5a0c3045a81df935f2c0' => 
@@ -33,13 +33,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '406a3afe5bd6bf8068d30dce85bbccfe0bc3768d' => 
     array (
       0 => '/Applications/MAMP/htdocs/public/tpl/components/post_box.tpl',
-      1 => 1447913307,
+      1 => 1447997728,
       2 => 'file',
     ),
     '3b09fbc9a9549df666bdca867a508512b06f5e95' => 
     array (
       0 => '/Applications/MAMP/htdocs/public/tpl/components/feed.tpl',
-      1 => 1447921597,
+      1 => 1447986308,
       2 => 'file',
     ),
     'a95fce650b578b43964f15b80ef1d399a8b17d9c' => 
@@ -49,21 +49,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'string',
     ),
   ),
-  'nocache_hash' => '1645250817564d87d3bd3fa5_86105668',
+  'nocache_hash' => '1503581701564eb121837804_56970704',
   'variables' => 
   array (
     'app_name' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_564d87d3cfe4d8_52912322',
+  'unifunc' => 'content_564eb121965d16_16052269',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_564d87d3cfe4d8_52912322')) {
-function content_564d87d3cfe4d8_52912322 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564eb121965d16_16052269')) {
+function content_564eb121965d16_16052269 ($_smarty_tpl) {
 if (!is_callable('smarty_function_IMPORT_RESOURCES')) require_once '/Applications/MAMP/htdocs/includes/gestbook/libs/plugins/function.IMPORT_RESOURCES.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
+$_smarty_tpl->properties['nocache_hash'] = '1503581701564eb121837804_56970704';
 ?>
 <!doctype html>
 <html>
@@ -84,7 +84,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
 " />
   
   <?php
-$_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
+$_smarty_tpl->properties['nocache_hash'] = '1503581701564eb121837804_56970704';
 ?>
 
   <link rel="stylesheet" href="<?php echo smarty_function_IMPORT_RESOURCES(array('imgServer'=>'/stylesheets/index.css'),$_smarty_tpl);?>
@@ -100,7 +100,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
   
   <div class="container wrap">
     <?php
-$_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
+$_smarty_tpl->properties['nocache_hash'] = '1503581701564eb121837804_56970704';
 ?>
 
   <div class="main">
@@ -108,14 +108,14 @@ $_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
     
     <?php if ($_smarty_tpl->tpl_vars['isLogin']->value === true) {?>
       <?php /*  Call merged included template "components/post_box.tpl" */
-echo $_smarty_tpl->getInlineSubTemplate("components/post_box.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, '682961986564d87d3c7e536_16150787', 'content_564d87d3c7d8e0_98280929');
+echo $_smarty_tpl->getInlineSubTemplate("components/post_box.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, '256514880564eb1218ed0a3_62657716', 'content_564eb1218ec6b0_54002395');
 /*  End of included template "components/post_box.tpl" */?>
 
     <?php }?>
 
     
     <?php /*  Call merged included template "components/feed.tpl" */
-echo $_smarty_tpl->getInlineSubTemplate("components/feed.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, '788652624564d87d3c8f1f9_58790253', 'content_564d87d3c8e988_81256213');
+echo $_smarty_tpl->getInlineSubTemplate("components/feed.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, '16699527564eb1218fdea8_52076636', 'content_564eb1218fd633_48034759');
 /*  End of included template "components/feed.tpl" */?>
 
     
@@ -129,8 +129,13 @@ echo $_smarty_tpl->getInlineSubTemplate("components/feed.tpl", $_smarty_tpl->cac
 
 
   
+  <?php echo $_smarty_tpl->getSubTemplate ("components/modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+  
+  
   <?php
-$_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
+$_smarty_tpl->properties['nocache_hash'] = '1503581701564eb121837804_56970704';
 ?>
 
 <?php echo '<script'; ?>
@@ -144,12 +149,12 @@ $_smarty_tpl->properties['nocache_hash'] = '1645250817564d87d3bd3fa5_86105668';
 <?php }
 }
 ?><?php
-/*%%SmartyHeaderCode:682961986564d87d3c7e536_16150787%%*/
-if ($_valid && !is_callable('content_564d87d3c7d8e0_98280929')) {
-function content_564d87d3c7d8e0_98280929 ($_smarty_tpl) {
+/*%%SmartyHeaderCode:256514880564eb1218ed0a3_62657716%%*/
+if ($_valid && !is_callable('content_564eb1218ec6b0_54002395')) {
+function content_564eb1218ec6b0_54002395 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '682961986564d87d3c7e536_16150787';
+$_smarty_tpl->properties['nocache_hash'] = '256514880564eb1218ed0a3_62657716';
 ?>
 <div class="post-holder card">
   
@@ -166,7 +171,17 @@ $_smarty_tpl->properties['nocache_hash'] = '682961986564d87d3c7e536_16150787';
       <p class="yo">不吐不快！赶紧把你压抑在心底的负能量大声喊出来吧！</p>
     </div>
     <div class="publish-textbox">
-      <textarea class="post-textbox" title="吐槽能量框"></textarea>
+      <div class="post-textbox-fake">
+        <div class="ps-box">
+          <div class="ps-inner">
+            <i class="fa fa-check-circle-o"></i>
+            <span>发布成功</span>
+          </div>
+        </div>
+      </div>
+      <div class="post-textbox-wrap">
+        <textarea class="post-textbox" title="吐槽能量框"></textarea>
+      </div>
     </div>
     <div class="media_box">
       <ul class="media_post_holder">
@@ -191,16 +206,16 @@ $_smarty_tpl->properties['nocache_hash'] = '682961986564d87d3c7e536_16150787';
     </div>
   </form>
 </div><?php
-/*/%%SmartyNocache:682961986564d87d3c7e536_16150787%%*/
+/*/%%SmartyNocache:256514880564eb1218ed0a3_62657716%%*/
 }
 }
 ?><?php
-/*%%SmartyHeaderCode:788652624564d87d3c8f1f9_58790253%%*/
-if ($_valid && !is_callable('content_564d87d3c8e988_81256213')) {
-function content_564d87d3c8e988_81256213 ($_smarty_tpl) {
+/*%%SmartyHeaderCode:16699527564eb1218fdea8_52076636%%*/
+if ($_valid && !is_callable('content_564eb1218fd633_48034759')) {
+function content_564eb1218fd633_48034759 ($_smarty_tpl) {
 ?>
 <?php
-$_smarty_tpl->properties['nocache_hash'] = '788652624564d87d3c8f1f9_58790253';
+$_smarty_tpl->properties['nocache_hash'] = '16699527564eb1218fdea8_52076636';
 ?>
 <div class="ST-feed">
   <div class="feed-wrap">
@@ -285,29 +300,9 @@ $_smarty_tpl->tpl_vars['item'] = $foreach_item_Sav;
 }
 ?>
   </div>
-
-  
-  <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">关闭</span>
-          </button>
-          <h4 class="modal-title" id="popupLabel">Modal title</h4>
-        </div>
-        <div class="modal-body">
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
 <?php
-/*/%%SmartyNocache:788652624564d87d3c8f1f9_58790253%%*/
+/*/%%SmartyNocache:16699527564eb1218fdea8_52076636%%*/
 }
 }
 ?>

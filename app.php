@@ -9,7 +9,7 @@ $smarty = new Smarty_Setup();
 
 $is_login = false;
 
-if($_SESSION['valid_user']) {
+if(isset($_SESSION['valid_user'])) {
     $is_login = true;
 }
 

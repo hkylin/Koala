@@ -1,5 +1,5 @@
 <?php
-/** 信息发布 **/
+/** 删除信息 **/
 
 // load php methods
 require('../app/methods.php');
@@ -9,6 +9,8 @@ $post_id = $_POST['post_id'];
 
 session_start();
 header("Content-Type: application/json; charset=UTF-8");
+
+check_auth_user();
 
 if(empty($post_id)) {
     $json = array('data' => array(

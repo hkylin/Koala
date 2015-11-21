@@ -8,6 +8,8 @@ $json = null;
 
 session_start();
 
+check_auth_user();
+
 // 销毁会话
 session_destroy();
 unset($action);

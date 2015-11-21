@@ -38,6 +38,12 @@ create table post_img (
   img_src CHAR(150)
 ) DEFAULT CHARSET=utf8;
 
+create table st_comment (
+  id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  post_id INT UNSIGNED NOT NULL,
+  comment CHAR(140),
+  parent INT UNSIGNED DEFAULT NULL
+) DEFAULT CHARSET=utf8;
 
 GRANT SELECT, UPDATE, INSERT, DELETE
 ON secret.*
