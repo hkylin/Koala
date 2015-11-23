@@ -69,5 +69,6 @@
 {/block}
 
 {block name="scripts"}
-  <script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/profile'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script>
+{* <script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/profile'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script> *}
+<script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/profile.js'}"></script>
 {/block}
