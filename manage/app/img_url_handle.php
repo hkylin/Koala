@@ -107,16 +107,41 @@ class img_url_handle {
                 break;
         }
 
+        imagesavealpha($source_image,true); //这里很重要,意思是不要丢了 $source_image 图像的透明色;
+
         $target_image = imagecreatetruecolor($target_width, $target_height);
+        imagealphablending($target_image,false); //这里很重要,意思是不合并颜色,直接用$img图像颜色替换,包括透明色;
+        imagesavealpha($target_image,true); //这里很重要,意思是不要丢了 $target_image 图像的透明色;
+
         $cropped_image = imagecreatetruecolor($cropped_width, $cropped_height);
+        imagealphablending($cropped_image,false); //这里很重要,意思是不合并颜色,直接用$img图像颜色替换,包括透明色;
+        imagesavealpha($cropped_image,true); //这里很重要,意思是不要丢了 $cropped_image 图像的透明色;
 
         // 裁剪
         imagecopy($cropped_image, $source_image, 0, 0, $source_x, $source_y, $cropped_width, $cropped_height);
         // 缩放
         imagecopyresampled($target_image, $cropped_image, 0, 0, 0, 0, $target_width, $target_height, $cropped_width, $cropped_height);
 
+
+        switch ($source_mime) {
+            case 'image/gif':
+                $dest_dir ? imagegif($target_image, $dest_dir) : imagegif($target_image);
+                break;
+
+            case 'image/jpeg':
+                $dest_dir ? imagejpeg($target_image, $dest_dir) : imagejpeg($target_image);
+                break;
+
+            case 'image/png':
+                $dest_dir ? imagepng($target_image, $dest_dir) : imagepng($target_image);
+                break;
+
+            default:
+                return false;
+                break;
+        }
         // 如果有路径,输出到路径内,如果没有则直接显示
-        $dest_dir ? imagejpeg($target_image, $dest_dir) : imagejpeg($target_image);
+        // $dest_dir ? imagejpeg($target_image, $dest_dir) : imagejpeg($target_image);
 
         imagedestroy($source_image);
         imagedestroy($target_image);
