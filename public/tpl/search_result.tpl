@@ -5,7 +5,7 @@
 {/block}
 
 {block name="Stylesheet"}
-  <link rel="stylesheet" href="{IMPORT_RESOURCES imgServer='/stylesheets/index.css'}" />
+  <link rel="stylesheet" href="{IMPORT_RESOURCES imgServer='/stylesheets/pages/index.css'}" />
 {/block}
 
 {block name="body"}
@@ -19,6 +19,6 @@
 {/block}
 
 {block name="scripts"}
-{* <script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/index'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script> *}
-<script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/index.js'}"></script>
+<script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/index'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script>
+{* <script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/index.js'}"></script> *}
 {/block}

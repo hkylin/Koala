@@ -1,0 +1,22 @@
+.ST-txt {
+    font-size: 100%;
+    overflow: hidden; // 这句可以使得文字在选择时高亮不会溢出
+    word-wrap: break-word;
+    color: $st-primary-text;
+}
+
+.fz-14 {
+    font-size: 0.875em !important;
+}
+
+.fz-16 {
+    font-size: 1em !important;
+}
+
+.fw-b {
+    font-weight: bold;
+}
+
+.txtalg-c {
+    text-align: center;
+}

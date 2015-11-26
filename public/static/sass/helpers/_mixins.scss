@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+@mixin st-box-shadow($shadow : 0 0 4px rgba(0,0,0,.3)) {
+    @include st-prefixer('box-shadow', $shadow);
+}
+
+@mixin st-prefixer($css-name, $css-value) {
+  -webkit-#{$css-name}: $css-value;
+  -moz-#{$css-name}: $css-value;
+  -ms-#{$css-name}: $css-value;
+  -o-#{$css-name}: $css-value;
+  #{$css-name}: $css-value;
+}

@@ -6,15 +6,15 @@
 
 
 {block name="Stylesheet"}
-  <link rel="stylesheet" href="{IMPORT_RESOURCES imgServer='/stylesheets/login.css'}" />
+  <link rel="stylesheet" href="{IMPORT_RESOURCES imgServer='/stylesheets/pages/profile.css'}" />
 {/block}
 
 {block name="body"}
   <div class="main">
     <div class="profile-area">
-      <div class="card-wrap card login-card">
+      <div class="card-wrap card form-card">
         <form id="profile_form" action="manage/api/profile_api.php" method="post" enctype="multipart/form-data" target="upload_target">
-          <legend class="login-legend fw-b">完善树袋熊</legend>
+          <legend class="form-legend fw-b">完善树袋熊</legend>
           <p id="tip" class="alert" style="display: none;"></p>
           <div class="form-group">
             <fieldset class="form-group">
@@ -69,6 +69,6 @@
 {/block}
 
 {block name="scripts"}
-{* <script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/profile'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script> *}
-<script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/profile.js'}"></script>
+<script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/profile'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script>
+{* <script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/profile.js'}"></script> *}
 {/block}

@@ -1,0 +1,17 @@
+.form-card {
+    background: url($logo) no-repeat 96% 3% #fff;
+    background-size: 45px;
+
+    .form-legend {
+        font-size: 24px;
+        margin-bottom: $padding/3;
+        color: $st-accent-color;
+    }
+}
+
+.card-bottom {
+    width: 95%;
+    margin: -1em auto 0 auto;
+    padding: 1em;
+    box-shadow: 0 0 15px 0 rgba(163, 180, 188, .3);
+}

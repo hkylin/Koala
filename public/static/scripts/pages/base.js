@@ -1,1 +1,5 @@
-requirejs(['logout']);
+require(['../main'], function() {
+
+  requirejs(['logout']);
+  
+}

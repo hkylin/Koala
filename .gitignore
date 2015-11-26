@@ -1,27 +1,32 @@
 .DS_Store
 .git
+# Logs
+logs
+*.log
+npm-debug.log*
 
 # Thumbnails
 ._*
 
 ## Directory-based project format:
-/.idea/
+.idea
 
 # ctags files
-/.tags
-/.gemtags
-/.tags_sorted_by_file
+.tags
+.gemtags
+.tags_sorted_by_file
 
-# ignore uploaded images
-/public/upload/
+# uploaded images
+public/upload/
 
-# ignore smarty cache
-/public/tpl_c/
+# smarty cache
+public/tpl_c/
 
-# ignore sass cache
-/public/static/.sass-cache/
+# sass cache
+.sass-cache
 
-# ignore test
-/_test/
+# test
+_test
 
-/cache/
+# node_modules
+node_modules

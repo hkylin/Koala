@@ -1,13 +1,20 @@
 @charset 'UTF-8';
-// 引入 bootstrap 库
-@import 'bootstrap/bootstrap';
 
-// 引入网站变量文件
-@import '_variables';
+// 引入 变量、mixins 等辅助文件
+@import 'import';
+// 引入 bootstrap 库
+@import 'vendors/bootstrap/bootstrap';
 
 // 引入字体库
-@import 'components/_iconfonts';
+@import 'components/iconfonts';
 
+// partial
+@import 'partial/buttons';
+@import 'partial/animate';
+@import 'partial/font';
+
+// 组件
 @import 'components/common';
+@import 'components/form';
 @import 'components/nav-bar';
 @import 'components/footer';

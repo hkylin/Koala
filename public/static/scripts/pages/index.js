@@ -1,5 +1,5 @@
-// require(['../main'], function() {
+require(['../main'], function() {
   
   require(['picZoom', 'publishSecret', 'feed']);
   
-// });
+});

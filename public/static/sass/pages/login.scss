@@ -1,0 +1,8 @@
+@charset 'UTF-8';
+
+@import '../import';
+
+.login-area {
+    max-width: $login-width;
+    margin: $padding auto 0 auto;
+}

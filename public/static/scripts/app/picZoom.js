@@ -2,7 +2,7 @@
 define(['jquery', 'handles'], function($, Handles) {
 
 $(function() {
-  // 绑定事件
+  // 为 action-type 绑定事件
   $(document).on('click', '[action-type]', function(e) {
     e.preventDefault();
     $this = $(this);
@@ -88,7 +88,6 @@ $(function() {
       $ST_media_box.hide();
       $ST_pic.find('.loading').remove();
       $ST_expend_media_box.html($html).show();
-
     }
   }
 

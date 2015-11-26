@@ -77,11 +77,11 @@ for($i = 1; $media_row = $s_media_result->fetch_assoc(); ++$i) {
 $html = '
 <div class="card card-wrap" data-st="'.$post_id.'">
   <div class="avatar pull-left">
-    <a href="/detail/'.$user_id.'"><img src="'.$user_r['avatar'].'" alt="'.$user_r['user_nickname'].'" title="'.$user_r['user_nickname'].'" /></a>
+    <a href="/detail/'.$user_id.'"><img src="'.$user_r['avatar'].'" alt="'.$user_r['user_nickname'].'" title="'.$user_r['user_nickname'].'" width="3.125em" /></a>
   </div>
   <div class="ST-detail">
     <div class="ST-info">
-      <a href="/detail/'.$user_id.'" class="ST-txt fz-14 fw-b">'.$user_r['user_nickname'].'</a>
+      <a href="/detail/'.$user_id.'" class="ST-txt fz-14 fw-b" title="'.$user_r['user_nickname'].'">'.$user_r['user_nickname'].'</a>
     </div>
     <div class="ST-txt" data-type="ST-message">
       '.$post_r['post'].'

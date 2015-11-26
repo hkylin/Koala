@@ -4,10 +4,9 @@ define(['jquery'], function($) {
 $(function() {
   var $publishForm = $('#publish_form'),
       $postTextbox = $publishForm.find('.post-textbox'),
-      $fakePostTextbox = $publishForm.find('.post-textbox-fake'),
-      $psBox = $fakePostTextbox.find('.ps-box'),
-      $sendBtn = $('#send_btn'),
-      $mediaBtn = $('.media-btn'),
+      $psBox = $publishForm.find('.ps-box'),
+      $postBtn = $('#post_btn'),
+      $mediaBtn = $('a[action-type="pic-upload"]'),
       $mediaUploadForm = $('#media_upload_form'),
       $postImgInp = $mediaUploadForm.find('input[type="file"]'),
       $media_url = [], // 储存上传媒体文件的 url
@@ -80,21 +79,16 @@ $(function() {
           return false;
         }
 
-        $postTextbox.hide();
-        $fakePostTextbox.show();
         $psBox.fadeIn(animateTime, function() {
           setTimeout(function() {
-            $psBox.fadeOut(animateTime, function() {
-              $fakePostTextbox.hide();
-              $postTextbox.show();
-            });
+            $psBox.fadeOut(animateTime);
           }, 500);
         });
 
         // 将发布的数据加入页面中
         $(post_content).prependTo($('.feed-wrap')).hide().slideDown(animateTime);
         $postTextbox.val('');
-        $('.media_post_holder').html('');
+        $('.post-media-holder').html('');
         // 将发送按钮重新 disable
         checkLength();
 
@@ -113,22 +107,22 @@ $(function() {
     if(!$postTextbox.length) return false;
     
     if($postTextbox.val().trim() === '' || $postTextbox.val().length > 140) {
-      $sendBtn.attr('disabled', true);
+      $postBtn.attr('disabled', true);
     } else {
-      $sendBtn.removeAttr('disabled');
+      $postBtn.removeAttr('disabled');
     }
   }
 
   // 增加图片框
   function addMedia( media_url ) {
-    $media_post_holder = $('.media_post_holder');
-    $tmp = '<li class="media_post_item"><img src="' + media_url + '" alt="" /><a class="opr" href="javascript:void(0);">x</a><div class="overlay"></div></li>';
+    $postMediaHolder = $('.post-media-holder');
+    $tmp = '<li class="post-media-item"><img src="' + media_url + '" alt="" /><a class="close" href="javascript:void(0);"><i class="fa fa-times"></i></a><div class="overlay"></div></li>';
 
-    $($tmp).appendTo($media_post_holder);
+    $($tmp).appendTo($postMediaHolder);
   }
 
   // remove media 预览图
-  $(document).on('click', '.opr', function(e) {
+  $(document).on('click', '.post-media-item a.close', function(e) {
     $this = $(this);
     $img_url = $this.siblings('img').attr('src');
     $.ajax({
@@ -143,7 +137,7 @@ $(function() {
           alert('删除失败');
           return;
         }
-        $this.parent('li.media_post_item').remove();
+        $this.parent('li.post-media-item').remove();
         // 从需要发送的 media 数组中移除删除图片的地址
         var _index = $media_url.indexOf($img_url);
         $media_url.splice($img_url, 1);
@@ -155,7 +149,7 @@ $(function() {
   // 页面刷新或退出时弹出提示
   var quitTip = '尚未完成帖子，确定现在退出？';
   $(window).on('beforeunload', function(e) {
-    if( $('.media_post_item').length || $('#post_textbox').val() ) {
+    if( $('.post-media-item').length || $('#post_textbox').val() ) {
       e = e || window.event;
       if (e) e.returnValue = quitTip; // 兼容 IE
       return quitTip;

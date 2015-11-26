@@ -1,6 +1,7 @@
 // FontAwesome path
-@import 'fontAwesome/_variables';
-
+@import 'vendors/fontAwesome/_variables';
+// bootstrap variables
+@import 'vendors/bootstrap/_variables';
 
 /* web main color style */
 $st-dark-primary-color: #455A64 !default;
@@ -13,25 +14,12 @@ $st-secondary-text: #727272 !default;
 $st-divider-color: #B6B6B6 !default;
 
 $max-width: 1200px !default;
-$padding: 50px !default;
-$pdg-1em: 1em !default;
+$min-width: 700px !default;
+$page-bottom: 7.5em !default; // 80px 页面底部距离
+$padding: 3.125em !default; // 50px
+$login-width: 400px !default;
 
 $box-shadow: 0 0 15px 0 rgba(darken($st-lighter-primary-color, 15%), 0.3);
 $box-shadow-inset: inset 0 0 15px 0 rgba(darken($st-lighter-primary-color, 15%), 0.3);
 
-/* tip */
-$success: #dff0d8;
-$success-txt: #3c763d;
-$success-border: #d6e9c6;
-
-$warning: #fcf8e3;
-$warning-txt: #8a6d3b;
-$warning-border: #faebcc;
-
-$attention: #d9edf7;
-$attention-txt: #31708f; 
-$attention-border: #bce8f1;
-
-$danger: #f2dede;
-$danger-txt: #a94442;
-$danger-border: #ebccd1;
+$logo: 'http://localhost:8888/public/static/images/logo.jpg';

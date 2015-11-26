@@ -18,7 +18,7 @@
 </head>
 <body>
   {* 导航栏 *}
-  {include file="components/nav_bar.tpl"}
+  {include file="components/nav-bar.tpl"}
 
   {* body *}
   <div class="container wrap">
@@ -31,7 +31,8 @@
   {* modal *}
   {include file="components/modal.tpl"}
   
-  <script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/base.js'}"></script>
+  
+  {* <script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/base.js'}"></script> *}
   {* 脚本 *}
   {block name="scripts"}{/block}
 </body>

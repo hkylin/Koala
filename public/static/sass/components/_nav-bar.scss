@@ -1,74 +1,101 @@
 /* 导航栏 */
 .ST-nav {
-    padding: 10px 0;
+    padding: (5 * $border-width) 0;
     margin-bottom: 1em;
-}
-
-.ST-logo,
-.gb-search {
-    float: left;
-}
-
-.ST-navbar:after {
-    display: table;
-    clear: both;
-
-    content: '';
-}
-
-.ST-logo {
-    width: 50px;
-}
-.ST-logo img {
-    display: block;
-
+    border-top: ($border-width * 3) solid $st-accent-color;
+    position: fixed;
     width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(#FFF, .95);
+    z-index: 1000;
+    @include st-box-shadow(0 0 5px rgba($gray-light, .75));
+
+    .ST-navbar:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+
+    .ST-logo {
+        float: left;
+        width: 150px;
+
+        .logo {
+            background-image: url(http://localhost:8888/public/static/images/logo.jpg);
+            width: 50px;
+            height: 50px;
+            display: block;
+            background-size: 50px 50px;
+            margin: 0 auto;
+        }
+    }
+
+    .search-wrap {
+        float: left;
+        margin-top: 0.35em;
+
+        .input-group {
+            width: 500px;
+        }
+
+        .input-group input {
+            @include st-box-shadow($box-shadow-inset);
+
+            &:focus {
+                border-color: $st-accent-color;
+                @include st-box-shadow(none);
+            }
+        }
+
+        .search-btn {
+            cursor: pointer;
+            padding: 0;
+            width: 50px;
+        }
+        .search-btn:hover {
+            color: $st-accent-color;
+        }
+
+        .search-btn button {
+            border: 0;
+            background: none;
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .gb-profile {
+        float: right;
+        padding: 11px 0;
+
+        a {
+            margin-right: 1em;
+            color: $st-primary-text;
+        }
+        a:hover {
+            color: $st-accent-color;
+        }
+
+        a span {
+            margin-left: 5px;
+        }
+    }
+
 }
 
-.gb-search {
-    margin-left: 4em;
-    margin-top: 0.35em;
+
+@media screen and (max-width: 990px) {
+
+.ST-nav {
+    .ST-logo {
+        width: 100px;
+    }
+    .search-wrap {
+        .input-group {
+            width: 300px;
+        }
+    }
 }
 
-.button-wrap {
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1;
-    color: #55595c;
-    text-align: center;
-    background-color: #eceeef;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-}
-
-.search-btn {
-    cursor: pointer;
-    vertical-align: middle;
-    padding: 0 5px;
-}
-.search-btn:hover {
-    color: $st-accent-color;
-}
-
-.input-group-addon button {
-    border: 0;
-    background: none;
-}
-
-.gb-profile {
-    float: right;
-
-    padding: 11px 0;
-}
-.gb-profile a {
-    margin-right: 10px;
-
-    color: $st-primary-text;
-}
-.gb-profile a:hover {
-    color: $st-accent-color;
-}
-.gb-profile a span {
-    margin-left: 5px;
 }

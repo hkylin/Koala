@@ -1,4 +1,5 @@
 define(['jquery'], function($) {
+  
   // 登出
   $(function() {
     // 登出

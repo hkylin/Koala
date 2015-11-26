@@ -5,15 +5,15 @@
 {/block}
 
 {block name="Stylesheet"}
-  <link rel="stylesheet" href="{IMPORT_RESOURCES imgServer='/stylesheets/login.css'}" />
+  <link rel="stylesheet" href="{IMPORT_RESOURCES imgServer='/stylesheets/pages/login.css'}" />
 {/block}
 
 {block name="body"}
   <div class="main">
     <div class="login-area">
-      <div class="card-wrap card login-card">
+      <div class="card-wrap card form-card">
         <form id="login_form" method="post">
-          <legend class="login-legend fw-b">登录树袋熊</legend>
+          <legend class="form-legend fw-b">登录树袋熊</legend>
           <p id="ST_tip" class="alert" style="display: none;"></p>
           <div class="form-group">
             <fieldset class="form-group">
@@ -45,6 +45,6 @@
 {/block}
 
 {block name="scripts"}
-{* <script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/login'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script> *}
-<script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/login.js'}"></script>
+<script type="text/javascript" data-main="{IMPORT_RESOURCES imgServer='/scripts/pages/login'}" src="{IMPORT_RESOURCES imgServer='/scripts/lib/require.js'}"></script>
+{* <script type="text/javascript" src="{IMPORT_RESOURCES imgServer='/dist/scripts/pages/login.js'}"></script> *}
 {/block}
