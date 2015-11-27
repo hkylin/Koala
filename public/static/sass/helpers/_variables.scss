@@ -15,11 +15,11 @@ $st-divider-color: #B6B6B6 !default;
 
 $max-width: 1200px !default;
 $min-width: 700px !default;
-$page-bottom: 7.5em !default; // 80px 页面底部距离
+$page-bottom: 7.5em !default; // 80px from bottom
 $padding: 3.125em !default; // 50px
 $login-width: 400px !default;
 
 $box-shadow: 0 0 15px 0 rgba(darken($st-lighter-primary-color, 15%), 0.3);
 $box-shadow-inset: inset 0 0 15px 0 rgba(darken($st-lighter-primary-color, 15%), 0.3);
 
-$logo: 'http://localhost:8888/public/static/images/logo.jpg';
+$logo: 'http://localhost:8888/public/static/images/logo.jpg'; // logo url

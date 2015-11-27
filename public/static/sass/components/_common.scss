@@ -9,15 +9,14 @@ body {
     position: relative;
     height: auto;
     min-height: 100%;
+
     text-rendering: optimizeLegibility;
 }
 
 a {
     color: $st-dark-primary-color;
-
     &:hover {
         text-decoration: none;
-
         color: $st-accent-color;
     }
 }
@@ -34,9 +33,9 @@ ul {
 }
 
 .wrap {
+    min-width: $min-width;
     max-width: $max-width;
     margin: 0 auto;
-    min-width: $min-width;
 }
 
 .container {
@@ -63,10 +62,10 @@ ul {
     right: 0;
     bottom: 0;
     left: 0;
-    transition: background .3s ease-in-out;
+    transition: background 0.3s ease-in-out;
     background: rgba(255,255,255,0);
 }
 
 .danger {
-    color: #d9534f !important;
+    color: #D9534F !important;
 }

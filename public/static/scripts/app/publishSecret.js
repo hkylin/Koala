@@ -29,7 +29,14 @@ $(function() {
   $postImgInp.on('change', function(e) {
     var file_data = $postImgInp.prop('files')[0],
         form_data = new FormData();
-    form_data.append('media_file', file_data);
+
+    if(file_data !== undefined) {
+      form_data.append('media_file', file_data);
+    } else {
+      // 防止 input[type='file'] 的值为空的情况下
+      // 会向后端发送错误数据
+      return false;
+    }
 
     $.ajax({
       url: 'manage/api/media_upload',

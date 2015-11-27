@@ -1,74 +1,65 @@
 /* 导航栏 */
 .ST-nav {
-    padding: (5 * $border-width) 0;
-    margin-bottom: 1em;
-    border-top: ($border-width * 3) solid $st-accent-color;
     position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(#FFF, .95);
     z-index: 1000;
-    @include st-box-shadow(0 0 5px rgba($gray-light, .75));
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: (5 * $border-width) 0;
+    border-top: ($border-width * 3) solid $st-accent-color;
+    background: rgba(#FFFFFF, 0.95);
 
+    @include st-box-shadow(0 0 5px rgba($gray-light, 0.75));
     .ST-navbar:after {
         display: table;
         clear: both;
         content: '';
     }
-
     .ST-logo {
         float: left;
         width: 150px;
-
         .logo {
-            background-image: url(http://localhost:8888/public/static/images/logo.jpg);
+            display: block;
             width: 50px;
             height: 50px;
-            display: block;
-            background-size: 50px 50px;
             margin: 0 auto;
+            background-image: url(http://localhost:8888/public/static/images/logo.jpg);
+            background-size: 50px 50px;
         }
     }
-
     .search-wrap {
         float: left;
         margin-top: 0.35em;
-
         .input-group {
             width: 500px;
         }
-
         .input-group input {
             @include st-box-shadow($box-shadow-inset);
-
             &:focus {
                 border-color: $st-accent-color;
+
                 @include st-box-shadow(none);
             }
         }
-
         .search-btn {
-            cursor: pointer;
-            padding: 0;
             width: 50px;
+            padding: 0;
+            cursor: pointer;
         }
         .search-btn:hover {
             color: $st-accent-color;
         }
-
         .search-btn button {
-            border: 0;
-            background: none;
             width: 100%;
             padding: 0;
+            border: 0;
+            background: none;
         }
     }
-
     .gb-profile {
         float: right;
         padding: 11px 0;
-
         a {
             margin-right: 1em;
             color: $st-primary-text;
@@ -76,26 +67,22 @@
         a:hover {
             color: $st-accent-color;
         }
-
         a span {
             margin-left: 5px;
         }
     }
-
 }
 
 
 @media screen and (max-width: 990px) {
-
-.ST-nav {
-    .ST-logo {
-        width: 100px;
-    }
-    .search-wrap {
-        .input-group {
-            width: 300px;
+    .ST-nav {
+        .ST-logo {
+            width: 100px;
+        }
+        .search-wrap {
+            .input-group {
+                width: 300px;
+            }
         }
     }
-}
-
 }

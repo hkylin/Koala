@@ -1,7 +1,6 @@
 .btn-accent {
-    color: #fff;
+    color: #FFFFFF;
     background-color: $st-accent-color;
-
     &:hover {
         background-color: darken($st-accent-color, 5%);
     }
