@@ -11,12 +11,20 @@ $(function() {
       $postImgInp = $mediaUploadForm.find('input[type="file"]'),
       $media_url = [], // 储存上传媒体文件的 url
       $tip = $('#ST_tip'),
+      $num = $publishForm.find('.num'),
       animateTime = 300;
 
   // 计算字数
-  checkLength();
+  checkLength( false );
   $postTextbox.on('keyup', function(e) {
     checkLength();
+  });
+
+  $postTextbox.on('focus', function(e) {
+    checkLength();
+  });
+  $postTextbox.on('blur', function(e) {
+    checkLength( false );
   });
 
   // 弹出 upload 框
@@ -51,14 +59,22 @@ $(function() {
             code = M.code,
             media_url = M.upload_url;
         if( !code ) {
-          $tip.html(msg).addClass('alert-warning').slideDown(animateTime);
+          $tip.html(msg).addClass('alert-warning').slideDown(animateTime, function() {
+            setTimeout(function() {
+              $tip.slideUp(animateTime);
+            }, 1000);
+          });
           return false;
         }
         addMedia(media_url);
         $media_url.push(media_url);
       },
       error: function(e) {
-        $tip.html('图片上传失败了~').addClass('alert-warning').slideDown(animateTime);
+        $tip.html('图片上传失败了~').addClass('alert-warning').slideDown(animateTime, function() {
+            setTimeout(function() {
+              $tip.slideUp(animateTime);
+            }, 1000);
+          });
         console.log(e);
       }
     });
@@ -81,6 +97,9 @@ $(function() {
             code = M.code,
             post_content = M.post;
 
+        // 发送成功后清空发送的媒体内容
+        $media_url = [];
+        
         if( !code ) {
           $tip.html(msg).addClass('alert-warning').slideDown(animateTime);
           return false;
@@ -97,7 +116,7 @@ $(function() {
         $postTextbox.val('');
         $('.post-media-holder').html('');
         // 将发送按钮重新 disable
-        checkLength();
+        checkLength( false );
 
         setTimeout(function() {
           $tip.html('').slideUp(animateTime);
@@ -110,10 +129,26 @@ $(function() {
   });
 
   // 检查弹出框的长度是否在 0~140 之间
-  function checkLength() {
+  function checkLength( isStart ) {
     if(!$postTextbox.length) return false;
+
+    var value = $postTextbox.val().trim(),
+        len = value.length,
+        left_num = 140 - len;
     
-    if($postTextbox.val().trim() === '' || $postTextbox.val().length > 140) {
+    if(isStart === undefined || len) {
+      if( left_num >= 0 ) {
+        html = '还可输入<span class="fw-b">' + left_num + '</span>个字';
+        $num.html( html ); 
+      } else {
+        html = ' 超出<span class="fw-b" style="color: #FF5105">' + Math.abs(left_num) + '</span>个字';
+        $num.html(html);
+      }
+    } else {
+      $num.html(''); 
+    }
+    
+    if(value === '' || len > 140) {
       $postBtn.attr('disabled', true);
     } else {
       $postBtn.removeAttr('disabled');

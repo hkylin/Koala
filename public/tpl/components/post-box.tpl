@@ -8,8 +8,13 @@
   {* 上传 post *}
   <form id="publish_form">
     <p id="ST_tip" class="alert" style="display: none;"></p>
-    <div class="title-area">
-      <p>不吐不快！赶紧把你压抑在心底的负能量大声喊出来吧！</p>
+    <div class="title-area clr">
+      <div class="title pull-left">
+        <p>不吐不快！赶紧把你压抑在心底的负能量大声喊出来吧！</p>
+      </div>
+      <div class="num pull-right">
+        {* <span class="fw-b">140</span> *}
+      </div>
     </div>
     <div class="publish">
       <div class="post-wrap">

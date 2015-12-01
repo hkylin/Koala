@@ -1,7 +1,18 @@
 .post-holder {
     padding: 1.5em;
-    .title-area p {
-        color: $st-primary-color;
+    .title-area {
+        .title {
+            color: $st-primary-color;
+        }
+        .num {
+            line-height: 1.5;
+            color: $st-dark-primary-color;
+            span {
+                font-family: cursive;
+                font-size: 2em;
+                line-height: 0;
+            }
+        }
     }
     .publish {
         margin-bottom: 1em;
