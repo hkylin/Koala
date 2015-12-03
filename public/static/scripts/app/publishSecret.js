@@ -12,12 +12,21 @@ $(function() {
       $media_url = [], // 储存上传媒体文件的 url
       $tip = $('#ST_tip'),
       $num = $publishForm.find('.num'),
-      animateTime = 300;
+      animateTime = 300,
+      timer = null;
 
   // 计算字数
+  // 定义一个计时器，用来计算即使按键一直被按住也会计算字数的情况
+  // 而不是等到按键松开才能看到字数的变化
   checkLength( false );
   $postTextbox.on('keyup', function(e) {
+    clearInterval(timer);
     checkLength();
+  });
+  $postTextbox.on('keydown', function(e) {
+    timer = setInterval(function(){
+      checkLength();
+    }, 10);
   });
 
   $postTextbox.on('focus', function(e) {

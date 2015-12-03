@@ -68,7 +68,8 @@
 
 
 // 媒体框展开
-.ST-expend-media-box {
+.ST-expend-media-box, .ST-forward-media-box {
+    position: relative;
     background: lighten($st-lighter-primary-color, 10%);
     .tab {
         ul {
@@ -139,6 +140,22 @@
     }
 }
 
+.ST-forward-media-box {
+    &:before {
+        content: '';
+        position: absolute;
+        border-width: 10px;
+        border-color: transparent transparent #ecf0f2 transparent;
+        border-style: dotted;
+        top: -20px;
+        left: 30px;
+
+    }
+    .ST-expend-media {
+        margin: 10px 0 8px;
+        padding: 12px 16px 16px;
+    }
+}
 
 .post-datetime {
     font-size: 12px;
