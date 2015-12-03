@@ -2,7 +2,7 @@
 ## 介绍
 树袋熊是一个类似微博的消息发布小应用，包含了登陆、注册、发布消息、上传图片、编辑或删除已发布信息、修改个人资料等功能。
 
-![主页](/Applications/MAMP/htdocs/public/static/images/README/home.png)
+![主页](https://github.com/musicq/Koala/blob/master/public/static/images/README/home.png)
 
 ## 安装
 应用是使用 `php & mysql & Apache` 搭建的。如果正好你使用 php 进行开发工作，或者已经搭建好了了 php 的开发环境，那么你可以直接将这个应用 clone 到本地，替换掉原本的 `htdocs` 文件进行访问。
