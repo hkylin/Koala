@@ -9,9 +9,10 @@
 
 #### 快速搭建
 Windows 用户可以直接下载 [wamp](http://www.wampserver.com/en/) 或者 [xampp](https://www.apachefriends.org/zh_cn/index.html)
+
 Mac 可以下载 [MAMP](https://www.mamp.info/en/)
 
-克隆下我们的整个程序
+克隆下这个程序
 
 ```
 git clone git@github.com:musicq/Koala.git
